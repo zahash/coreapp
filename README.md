@@ -7,6 +7,7 @@ specific to this author's approach to development (like pytest with coverage
  along with argparser for CLI, etc) but can be adapted for anyone else's needs 
  with some basic tweaking.
 
-My use of this repository consists of cloning its contents into a local
-directory, making the necessary modifications, commiting and then pushing it
+#### How to use
+The use of this repository consists of cloning its contents into a local
+directory, making the necessary modifications, committing and then pushing it
  upstream with the new project into its specific repository.
