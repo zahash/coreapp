@@ -1,0 +1,5 @@
+include LICENSE README.md pytest.ini
+prune .pytest_cache
+prune venv
+prune .circleci
+prune .idea
