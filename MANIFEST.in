@@ -1,5 +1,8 @@
-include LICENSE README.md pytest.ini
-prune .pytest_cache
+include LICENSE README.md
+graft tests
+exclude tests/main/.coverage
+prune tests/main/htmlcov
+prune tests/.pytest_cache
 prune venv
 prune .circleci
 prune .idea

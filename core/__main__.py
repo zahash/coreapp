@@ -3,14 +3,14 @@ import argparse
 
 
 def my_cli():
-    parser = argparse.ArgumentParser(usage='core.py [-h] POS_ARG '
-                                           'OPT_ARG',
+    parser = argparse.ArgumentParser(usage='core.py [-h] POS_ARG [-o OPT_ARG]',
                                      description="What core.py does here.")
     parser.add_argument('positional',
                         metavar='POS_ARG',
                         type=str,
                         help='What this argument does.')
-    parser.add_argument('optional',
+    parser.add_argument('-o',
+                        '--optional',
                         metavar='OPT_ARG',
                         type=str,
                         help='What this option does.')
