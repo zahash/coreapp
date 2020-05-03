@@ -1,31 +1,31 @@
 # Python CircleCI 2.1 configuration file
-
 version: 2.1
+
+orbs:
+  # Reference: https://circleci.com/orbs/registry/orb/circleci/python
+  python: circleci/python@0.3.0 # the selected Orb and its version
+
 jobs: # a basic unit of work in a run
-  build: # the main job to execute
-    docker: # indicate that we are using the docker executor
-      - image: 'circleci/python:latest' # Our selected version of Python
-
-    working_directory: ~/repo
-
+  build_and_test: # the job to execute
+    executor: python/default # using the orbs default executor
     steps: # a series of commands to run
-      - checkout # pull down code from your version control system.
+      - checkout # pull down code from version control system.
+
+      # The following steps are "functions" called from the selected Orb
+      - python/load-cache
+      - python/install-deps
+      - python/save-cache
+      - python/dist
+      - python/test:
+          pytest: true
+
+      # Check compliance to PEP8 standards with "flake8"
       - run:
-          # create virtual environment and install dependencies
-          name: Install Dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
-      - run:
-          # run tests
-          name: Run Tests
-          command: |
-            . venv/bin/activate
-            pytest -v --cov=core
+            flake8 --exclude=venv*, __init__.py --statistics
+          name: Inspect PEP8 (flake8)
 
 workflows:
-  version: 2
-  install_and_test:
+  main:
     jobs:
-      - build
+      - build_and_test
