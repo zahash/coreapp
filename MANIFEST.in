@@ -1,4 +1,4 @@
-include LICENSE README.md conftest.py
+include LICENSE README.md CONTRIBUTING.md conftest.py
 graft tests
 exclude tests/main/.coverage
 prune tests/main/htmlcov
