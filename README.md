@@ -21,14 +21,14 @@ The use of this repository consists of simple steps:
  This project is organized in a way that anyone can tailor it to their needs by
  simply "trimming" the excesses (or deleting whatever is deemed unnecessary
  ). Following Step 3 is as simple as adapting the file structure to fit your
-  specific needs by evaluating your own use cases. That being said, if...
+  specific needs by evaluating your own use cases. That being said...
  
-### "... You don't use Continuous Integration or CircleCI's service, then..."
+### "... If you don't use Continuous Integration or CircleCI's service, then..."
  *Delete the directory named ".circleci":*
 
 ```user@host:~/coreapp$ rm -rf .circleci```
 
-### "... You don't do Test-Driven Development or use PyTest, then..." 
+### "... If you don't do Test-Driven Development or use PyTest, then..." 
 *Delete the directory named "tests" and the file "conftest.py":*
 
 ```
@@ -36,12 +36,12 @@ user@host:~/coreapp$ rm -rf tests
 user@host:~/coreapp$ rm conftest.py
 ```
 
-### "... You don't need to build your scripts into a package, then..."
+### "... If you don't need to build your scripts into a package, then..."
 *Delete the files requirements.txt and setup.py:*
 
 ```user@host:~/coreapp$ rm requirements.txt setup.py```
 
-### "... Your script doesn't need a CLI or do you use argparse, then..."
+### "... If your script doesn't need a CLI or do you use argparse, then..."
 *Either delete the contest of the __main__.py file and leave it blank or get
 rid of the entire file itself:*
 
