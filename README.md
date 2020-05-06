@@ -1,4 +1,4 @@
-# Core Python 3 Application Structure
+# Python 3 Core Application Structure
 
 ## Description
 This repository has the function of serving as a main skeleton from which
