@@ -10,7 +10,7 @@ specific to this author's approach to development but can be adapted for anyone 
  - A template for setup.py to facilitate builds
  - Use of \_\_main__.py along with argparse for CLI
 
-## How to use
+## Usage
 The use of this repository consists of simple steps:
 1. Forking it to your remote repository on GitHub.
 2. Cloning its contents into a local directory on your system.
@@ -42,7 +42,7 @@ user@host:~/coreapp$ rm conftest.py
 ```user@host:~/coreapp$ rm requirements.txt setup.py```
 
 ### "... If your script doesn't need a CLI or do you use argparse, then..."
-*Either delete the contest of the __main__.py file and leave it blank or get
+*Either delete the contents of the __main__.py file and leave it blank or get
 rid of the entire file itself:*
 
 ```user@host:~/coreapp$ rm core/__main__.py```
