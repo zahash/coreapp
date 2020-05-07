@@ -1,6 +1,5 @@
 # Python 3 Core Application Structure
 
-## Description
 This repository has the function of serving as a main skeleton from which
 an application project can be initiated. It contains features that are
 specific to this author's approach to development but can be adapted for anyone else's needs 
@@ -29,7 +28,7 @@ The use of this repository consists of simple steps:
 ```user@host:~/coreapp$ rm -rf .circleci```
 
 ### "... If you don't do Test-Driven Development or use PyTest, then..." 
-*Delete the directory named "tests" and the file "conftest.py":*
+*Delete the directory named "tests" and/or the file "conftest.py":*
 
 ```
 user@host:~/coreapp$ rm -rf tests
@@ -46,3 +45,8 @@ user@host:~/coreapp$ rm conftest.py
 rid of the entire file itself:*
 
 ```user@host:~/coreapp$ rm core/__main__.py```
+
+### "... If your scripts don't produce any kind of data files, then..."
+*Delete the data directory:*
+
+```user@host:~/coreapp$ rm -rf data```

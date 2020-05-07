@@ -1,6 +1,9 @@
 include LICENSE README.md CONTRIBUTING.md CHANGELOG.md conftest.py
+graft src
 graft tests
-exclude tests/main/.coverage
+graft data
+graft docs
+exclude .coverage
 prune tests/main/htmlcov
 prune tests/.pytest_cache
 prune venv

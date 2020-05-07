@@ -1,4 +1,4 @@
-import core
+from src import core
 import argparse
 
 
