@@ -4,10 +4,10 @@ This repository has the function of serving as a main skeleton from which
 an application project can be initiated. It contains features that are
 specific to this author's approach to development but can be adapted for anyone else's needs 
  with some basic tweaking:
- - A config.yml template file for CD/CI with CircleCI
+ - A `config.yml` template file for CD/CI with CircleCI
  - PyTest with coverage and strict options for TDD
- - A template for setup.py to facilitate builds
- - Use of \_\_main__.py along with argparse for CLI
+ - A template for `setup.py` to facilitate builds
+ - Use of `__main__.py` along with argparse for CLI
 
 ## Usage
 The use of this repository consists of simple steps:
@@ -22,6 +22,13 @@ The use of this repository consists of simple steps:
  ). Following Step 3 is as simple as adapting the file structure to fit your
   specific needs by evaluating your own use cases. That being said...
  
+### "... If you cloned this repository to your local system and don't want to see its commit history as part of your own project's commit history, then..."
+*The following command will open your standard text editor. For each commit
+ except the first , change **pick** to **squash**, save & quit and then edit the
+  commit message as you prefer.*
+
+```user@host:~/coreapp$ git rebase -i --root```
+
 ### "... If you don't use Continuous Integration or CircleCI's service, then..."
  *Delete the directory named ".circleci":*
 
